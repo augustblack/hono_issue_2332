@@ -1,0 +1,10 @@
+name = "hono-issue-2332"
+compatibility_date = "2022-07-19"
+main = "src/index.ts"
+
+[durable_objects]
+bindings = [{name = "SIGNAL_SERVER", class_name = "SignalServer"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["SignalServer"]
